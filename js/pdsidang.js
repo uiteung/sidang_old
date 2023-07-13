@@ -1,5 +1,5 @@
 import { TokenLogin} from "./temp/config.js";
-import {  PostSignUp } from "./temp/table.js";
+import { PostSignUp } from "./temp/table.js";
 import { onClick } from "https://jscroot.github.io/element/croot.js";
 const form = document.querySelector('form');
 
