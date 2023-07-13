@@ -43,3 +43,9 @@ export function validateForm() {
   }
   return true;
 }
+
+
+export function validatecookies(){  
+  if (!TokenLogin) {
+    window.location.replace("https://euis.ulbi.ac.id/")
+  }}

@@ -1,13 +1,9 @@
 import { TokenLogin, TokenKey, urlPost } from "./temp/config.js";
-import { resetform, validateForm, takeResponse } from "./temp/table.js";
+import { resetform, validateForm, takeResponse, validatecookies } from "./temp/table.js";
 const form = document.querySelector('form');
 
-  if (!TokenLogin) {
-    window.location.replace("https://euis.ulbi.ac.id/")
-  }
-
-
 export function PostSignUp() {
+    validatecookies();
     console.log("udah di klik");
     var myHeaders = new Headers();
     myHeaders.append(TokenKey, TokenLogin);
