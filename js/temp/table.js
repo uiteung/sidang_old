@@ -7,18 +7,18 @@ export function resetform(){
     document.getElementById('form').reset();
   }
 
-// export function takeResponse(result){
-//     console.log(result)
-//     userTable(result)
-// }
+export function takeResponse(result){
+    console.log(result)
+    if (result === {}){
+      alert("kamu bukan mahasiswa ta")
+    }else{
+      userTable(result)
+    }
+
+}
 
 export function userTable(response){
     let json = JSON.parse(response)
-    let emptyobj = {};
-    if (json === emptyobj){
-      alert("Anda bukan mahasiswa TA");
-      window.location.replace("https://euis.ulbi.ac.id/");
-    } 
     let npm = json.npm == null ? "" : json.npm; 
     let nama = json.nama == null ? "" : json.nama; 
     let penguji = json.penguji == null ? "" : json.penguji; 
