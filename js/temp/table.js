@@ -1,8 +1,6 @@
 import { rowtabel, TokenLogin } from "../temp/config.js";
 import { addInner, setInner } from "https://jscroot.github.io/element/croot.js";
 
-
-
 export function resetform(){
     document.getElementById('form').reset();
   }
@@ -19,9 +17,6 @@ export function resetform(){
 
 export function userTable(response){
     let json = JSON.parse(response)
-    if (json === {}){
-      setInner("form", "ANDA BUKAN MAHASISWA TA")
-    }
     let npm = json.npm == null ? "" : json.npm; 
     let nama = json.nama == null ? "" : json.nama; 
     let penguji = json.penguji == null ? "" : json.penguji; 
@@ -44,8 +39,33 @@ export function validateForm() {
   return true;
 }
 
+export function PostSignUp() {
+  console.log("udah di klik");
+  var myHeaders = new Headers();
+  myHeaders.append(TokenKey, TokenLogin);
+  myHeaders.append("Content-Type", "application/json");
 
-export function validatecookies(){  
-  if (!TokenLogin) {
-    window.location.replace("https://euis.ulbi.ac.id/")
-  }}
+  var noskt = document.getElementById("nosrtskt").value;
+  console.log(noskt);
+  validateForm();
+  
+  var raw = JSON.stringify({
+    "nomor": noskt
+  });
+  
+  if (noskt === ""){
+    alert("cannot post")
+  }else{
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
+  
+    fetch(urlPost, requestOptions)
+      .then(response => response.text())
+      .then(result => userTable(result))
+      .catch(error => console.log('error', error));
+  }
+  }
