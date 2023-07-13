@@ -1,5 +1,5 @@
 import { TokenKey, TokenLogin, urlPost, rowtabel } from "../temp/config.js";
-import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { addInner, setInner } from "https://jscroot.github.io/element/croot.js";
 
 
 
@@ -7,18 +7,21 @@ export function resetform(){
     document.getElementById('form').reset();
   }
 
-export function takeResponse(result){
-    console.log(result)
-    if (result === {}){
-      alert("kamu bukan mahasiswa ta")
-    }else{
-      userTable(result)
-    }
+// export function takeResponse(result){
+//     console.log(result)
+//     if (result === null){
+//       alert("kamu bukan mahasiswa ta")
+//     }else{
+//       userTable(result)
+//     }
 
-}
+// }
 
 export function userTable(response){
     let json = JSON.parse(response)
+    if (json === {}){
+      setInner("form", "ANDA BUKAN MAHASISWA TA")
+    }
     let npm = json.npm == null ? "" : json.npm; 
     let nama = json.nama == null ? "" : json.nama; 
     let penguji = json.penguji == null ? "" : json.penguji; 
