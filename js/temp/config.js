@@ -14,7 +14,11 @@ export let rowtabel = `<table class="table-auto">
 </thead>
 <tbody>
   <tr>
-    <td><p>NPM : #npm#</p>
+    <td>
+        <p>Jadwal Sidang besok pukul 09.00 WIB</p>
+        <p>Lokasi Prodi</p>
+        <p>Segera Hubungi Penguji dan Pembimbing</p>
+        <p>NPM : #npm#</p>
         <p>Nama : #nama#</p>
         <p>Penguji : #penguji#</p>
         <p>Pembimbing : #pembimbing#</p></td>
