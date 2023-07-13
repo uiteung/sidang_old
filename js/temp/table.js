@@ -8,16 +8,22 @@ export function resetform(){
   }
 
 export function takeResponse(result){
+    console.log(result)
+    if (result)
     userTable(result)
 }
 
 export function userTable(response){
     let json = JSON.parse(response)
+    let npm = json.npm == null ? "" : json.npm; 
+    let nama = json.nama == null ? "" : json.nama; 
+    let penguji = json.penguji == null ? "" : json.penguji; 
+    let pembimbing = json.pembimbing == null ? "" : json.pembimbing; 
     let row = '';
-        row = rowtabel.replace("#npm#", json.npm).
-        replace("#nama#", json.nama).
-        replace("#penguji#", json.penguji).
-        replace("#pembimbing#", json.pembimbing);
+        row = rowtabel.replace("#npm#", npm).
+        replace("#nama#", nama).
+        replace("#penguji#", penguji).
+        replace("#pembimbing#", pembimbing);
     addInner("responsetab",row);
 }
 
