@@ -1,5 +1,5 @@
 import { TokenLogin, TokenKey, urlPost } from "./temp/config.js";
-import { userTable, resetform, validateForm } from "./temp/table.js";
+import { userTable, resetform, validateForm, takeResponse } from "./temp/table.js";
 const form = document.querySelector('form');
 // "nomor": "4381/PUS.01.01/PDPBP"
   if (!TokenLogin) {
@@ -33,7 +33,7 @@ export function PostSignUp() {
     
       fetch(urlPost, requestOptions)
         .then(response => response.text())
-        .then(result => userTable(result))
+        .then(result => takeResponse(result))
         .catch(error => console.log('error', error));
     }
     }
