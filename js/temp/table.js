@@ -7,7 +7,7 @@ export function resetform(){
     document.getElementById('form').reset();
   }
 
-function takeResponse(result){
+export function takeResponse(result){
     userTable(result)
 }
 
