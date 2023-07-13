@@ -1,4 +1,4 @@
-import { TokenKey, TokenLogin, urlPost, rowtabel } from "../temp/config.js";
+import { rowtabel } from "../temp/config.js";
 import { addInner, setInner } from "https://jscroot.github.io/element/croot.js";
 
 
