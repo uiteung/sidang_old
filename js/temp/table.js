@@ -44,3 +44,13 @@ export function userTable(response){
         replace("#pembimbing#", json.pembimbing);
     addInner("responsetab",row);
 }
+
+export function validateForm() {
+  var noskt = document.getElementById("nosrtskt").value;
+  
+  if (noskt === "") {
+    alert("Nomor SKT harus diisi");
+    return false;
+  }
+  return true;
+}

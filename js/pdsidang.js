@@ -1,5 +1,5 @@
 import { TokenLogin } from "./temp/config.js";
-import { PostSignUp, resetform } from "./temp/table.js";
+import { PostSignUp, resetform, validateForm } from "./temp/table.js";
 const form = document.querySelector('form');
 // "nomor": "4381/PUS.01.01/PDPBP"
   if (!TokenLogin) {
@@ -9,6 +9,7 @@ const form = document.querySelector('form');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(form);
+    validateForm();
     PostSignUp(formData);
     resetform();
   })
