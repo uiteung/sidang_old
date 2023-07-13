@@ -1,4 +1,4 @@
-import { TokenLogin } from "./temp/config.js";
+import { TokenLogin, TokenKey } from "./temp/config.js";
 import { takeResponse, resetform, validateForm } from "./temp/table.js";
 const form = document.querySelector('form');
 // "nomor": "4381/PUS.01.01/PDPBP"
