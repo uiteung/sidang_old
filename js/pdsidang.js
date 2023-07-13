@@ -7,7 +7,7 @@ const form = document.querySelector('form');
   }
   const formData = new FormData(form);
 
-function PostSignUp() {
+export function PostSignUp() {
     console.log("udah di klik")
     var myHeaders = new Headers();
     myHeaders.append(TokenKey, TokenLogin);
