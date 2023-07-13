@@ -1,4 +1,4 @@
-import { rowtabel, TokenLogin,TokenKey } from "../temp/config.js";
+import { rowtabel, TokenLogin,TokenKey, urlPost } from "../temp/config.js";
 import { addInner, setInner } from "https://jscroot.github.io/element/croot.js";
 
 export function resetform(){
