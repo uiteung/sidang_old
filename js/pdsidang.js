@@ -1,5 +1,5 @@
 import { TokenLogin, TokenKey, urlPost } from "./temp/config.js";
-import { resetform, validateForm, takeResponse, validatecookies } from "./temp/table.js";
+import { resetform, validateForm, takeResponse, validatecookies, userTable } from "./temp/table.js";
 const form = document.querySelector('form');
 
 export function PostSignUp() {
@@ -29,7 +29,7 @@ export function PostSignUp() {
     
       fetch(urlPost, requestOptions)
         .then(response => response.text())
-        .then(result => takeResponse(result))
+        .then(result => userTable(result))
         .catch(error => console.log('error', error));
     }
     }
