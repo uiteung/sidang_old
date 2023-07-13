@@ -1,5 +1,5 @@
 import { TokenLogin, TokenKey, urlPost } from "./temp/config.js";
-import { resetform, validateForm, takeResponse, validatecookies, userTable } from "./temp/table.js";
+import { resetform, validateForm, validatecookies, userTable } from "./temp/table.js";
 const form = document.querySelector('form');
 
 export function PostSignUp() {
