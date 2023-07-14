@@ -15,9 +15,9 @@ export let rowtabel = `<table class="table-auto">
 <tbody>
   <tr>
     <td>
-        <p>Jadwal Sidang besok pukul 09.00 WIB</p>
-        <p>Lokasi Prodi</p>
-        <p>Segera Hubungi Penguji dan Pembimbing</p>
+        <p>Jadwal Sidang Menunggu Verikasi Persyaratan Sidang</p>
+        <p>Oleh Prodi s/d tgl 24 Juli 2023</p>
+        <p>Informasi Penguji dan Pembimbing</p>
         <p>NPM : #npm#</p>
         <p>Nama : #nama#</p>
         <p>Penguji : #penguji#</p>
